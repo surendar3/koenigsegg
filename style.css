@@ -1,0 +1,163 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    cursor: pointer;
+    font-family: sans-serif;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    background-color: black;
+    overflow: hidden;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 15px;
+    color: white;
+    animation: headerr 1s ease-in-out;
+}
+
+header h1 {
+    color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 50px;
+    font-weight: 600;
+}
+
+@keyframes headerr {
+    0% {
+        transform: translateY(-100%);
+    }
+
+}
+
+nav li {
+    display: inline-block;
+    margin: 10px 20px;
+    font-weight: 600;
+    background-color: brown;
+    border-radius: 5px;
+    padding: 2px;
+}
+
+.main {
+    width: 100%;
+    display: flex;
+}
+
+.content {
+    width: 50%;
+    margin-top: 8%;
+    margin-left: 10%;
+    animation: con 2s ease-in-out;
+}
+
+@keyframes con {
+    0% {
+        transform: translateX(-100%);
+    }
+}
+
+.content h1 {
+    font-size: 80px;
+    margin: 3%;
+}
+
+.content h3 {
+    font-size: 25px;
+    margin: 3%;
+}
+
+.content p {
+    font-size: 15px;
+    margin: 3%;
+}
+
+.one {
+    background-image: url(./images/burning-sun.gif);
+    background-size: cover;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+button {
+    border-radius: 10px;
+    padding: 5px;
+    margin: 3%;
+}
+
+button:hover {
+    transform: scale(1.1);
+    box-shadow: 1px 2px limegreen;
+}
+
+.image {
+    width: 50%;
+    margin-top: 8%;
+    margin-left: 0;
+    animation: im 2s cubic-bezier(.45, .27, .84, .25);
+
+}
+
+@keyframes im {
+    0% {
+        transform: translateX(100%);
+    }
+}
+
+img {
+    width: 40 rem;
+}
+
+@media screen and (max-width:1200px) {
+    .content {
+        width: 100%;
+        text-align: center;
+        z-index: 1;
+    }
+
+    .image {
+        position: absolute;
+        width: 100%;
+        opacity: 0.5;
+        bottom: -5%;
+        display: flex;
+        justify-content: center;
+    }
+
+    img {
+        width: 20rem;
+    }
+}
+
+@media screen and (max-width:576px) {
+    .content {
+        width: 100%;
+        text-align: center;
+        z-index: 1;
+    }
+
+    .content h1,
+    h3,
+    p,
+    button {
+        margin-bottom: 5%;
+    }
+
+    .image {
+        position: absolute;
+        width: 100%;
+        opacity: 0.5;
+        bottom: -5px;
+        display: flex;
+        justify-content: center;
+    }
+
+    img {
+        width: 30rem;
+    }
+}
